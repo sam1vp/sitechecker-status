@@ -1,14 +1,19 @@
 {
   "url": "https://www.portofoakland.com/community/harbor-tours",
-  "status": "timeout",
-  "last_updated": "2026-04-28 08:12:45 PM PT",
-  "last_check": "2026-04-28 08:12:45 PM PT",
+  "status": "ok",
+  "last_updated": "2026-04-28 08:13:01 PM PT",
+  "last_check": "2026-04-28 08:13:01 PM PT",
   "last_change": null,
   "stats": {
-    "total_checks": 131,
+    "total_checks": 132,
     "uptime_start": "2026-04-28 06:01:58 PM PT"
   },
   "recent_log": [
+    {
+      "time": "2026-04-28 08:13:01 PM PT",
+      "result": "ok",
+      "note": "No change detected."
+    },
     {
       "time": "2026-04-28 08:12:45 PM PT",
       "result": "timeout",
@@ -501,11 +506,6 @@
     },
     {
       "time": "2026-04-28 06:34:01 PM PT",
-      "result": "ok",
-      "note": "No change detected."
-    },
-    {
-      "time": "2026-04-28 06:33:02 PM PT",
       "result": "ok",
       "note": "No change detected."
     }
