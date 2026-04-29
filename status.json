@@ -1,106 +1,18 @@
 {
   "url": "https://www.portofoakland.com/community/harbor-tours",
   "status": "ok",
-  "last_updated": "2026-04-28 10:25:00 PM PT",
-  "last_check": "2026-04-28 10:25:00 PM PT",
+  "last_updated": "2026-04-28 10:29:49 PM PT",
+  "last_check": "2026-04-28 10:29:49 PM PT",
   "last_change": null,
   "stats": {
-    "total_checks": 18,
-    "uptime_start": "2026-04-28 10:07:53 PM PT"
+    "total_checks": 1,
+    "uptime_start": "2026-04-28 10:29:48 PM PT"
   },
   "recent_log": [
     {
-      "time": "2026-04-28 10:25:00 PM PT",
+      "time": "2026-04-28 10:29:49 PM PT",
       "result": "ok",
       "note": "No change detected."
-    },
-    {
-      "time": "2026-04-28 10:23:58 PM PT",
-      "result": "ok",
-      "note": "No change detected."
-    },
-    {
-      "time": "2026-04-28 10:22:57 PM PT",
-      "result": "ok",
-      "note": "No change detected."
-    },
-    {
-      "time": "2026-04-28 10:21:59 PM PT",
-      "result": "ok",
-      "note": "No change detected."
-    },
-    {
-      "time": "2026-04-28 10:20:58 PM PT",
-      "result": "ok",
-      "note": "No change detected."
-    },
-    {
-      "time": "2026-04-28 10:19:57 PM PT",
-      "result": "ok",
-      "note": "No change detected."
-    },
-    {
-      "time": "2026-04-28 10:18:57 PM PT",
-      "result": "ok",
-      "note": "No change detected."
-    },
-    {
-      "time": "2026-04-28 10:17:57 PM PT",
-      "result": "ok",
-      "note": "No change detected."
-    },
-    {
-      "time": "2026-04-28 10:16:57 PM PT",
-      "result": "ok",
-      "note": "No change detected."
-    },
-    {
-      "time": "2026-04-28 10:15:57 PM PT",
-      "result": "ok",
-      "note": "No change detected."
-    },
-    {
-      "time": "2026-04-28 10:14:57 PM PT",
-      "result": "ok",
-      "note": "No change detected."
-    },
-    {
-      "time": "2026-04-28 10:13:56 PM PT",
-      "result": "ok",
-      "note": "No change detected."
-    },
-    {
-      "time": "2026-04-28 10:12:59 PM PT",
-      "result": "ok",
-      "note": "No change detected."
-    },
-    {
-      "time": "2026-04-28 10:11:58 PM PT",
-      "result": "ok",
-      "note": "No change detected."
-    },
-    {
-      "time": "2026-04-28 10:10:57 PM PT",
-      "result": "ok",
-      "note": "No change detected."
-    },
-    {
-      "time": "2026-04-28 10:09:57 PM PT",
-      "result": "ok",
-      "note": "No change detected."
-    },
-    {
-      "time": "2026-04-28 10:08:58 PM PT",
-      "result": "ok",
-      "note": "No change detected."
-    },
-    {
-      "time": "2026-04-28 10:07:55 PM PT",
-      "result": "change_unrelated",
-      "note": "Page content changed but no ticket-sale signals detected. Triggered by: New link(s) appeared: https://www.portofoakland.com/, https://www.portofoakland.com/community",
-      "signals": [
-        "New link(s) appeared: https://www.portofoakland.com/, https://www.portofoakland.com/community"
-      ]
     }
   ]
 }
