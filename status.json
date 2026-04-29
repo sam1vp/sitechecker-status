@@ -1,14 +1,19 @@
 {
   "url": "https://www.portofoakland.com/community/harbor-tours",
   "status": "error",
-  "last_updated": "2026-04-28 10:06:51 PM PT",
-  "last_check": "2026-04-28 10:06:51 PM PT",
+  "last_updated": "2026-04-28 10:07:48 PM PT",
+  "last_check": "2026-04-28 10:07:48 PM PT",
   "last_change": null,
   "stats": {
-    "total_checks": 5,
+    "total_checks": 6,
     "uptime_start": "2026-04-28 10:02:46 PM PT"
   },
   "recent_log": [
+    {
+      "time": "2026-04-28 10:07:48 PM PT",
+      "result": "error",
+      "note": "NameError: uninitialized constant JSON::ParseError"
+    },
     {
       "time": "2026-04-28 10:06:51 PM PT",
       "result": "error",
