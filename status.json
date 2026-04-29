@@ -1,43 +1,21 @@
 {
   "url": "https://www.portofoakland.com/community/harbor-tours",
-  "status": "error",
-  "last_updated": "2026-04-28 10:07:48 PM PT",
-  "last_check": "2026-04-28 10:07:48 PM PT",
+  "status": "change_unrelated",
+  "last_updated": "2026-04-28 10:07:55 PM PT",
+  "last_check": "2026-04-28 10:07:55 PM PT",
   "last_change": null,
   "stats": {
-    "total_checks": 6,
-    "uptime_start": "2026-04-28 10:02:46 PM PT"
+    "total_checks": 1,
+    "uptime_start": "2026-04-28 10:07:53 PM PT"
   },
   "recent_log": [
     {
-      "time": "2026-04-28 10:07:48 PM PT",
-      "result": "error",
-      "note": "NameError: uninitialized constant JSON::ParseError"
-    },
-    {
-      "time": "2026-04-28 10:06:51 PM PT",
-      "result": "error",
-      "note": "NameError: uninitialized constant JSON::ParseError"
-    },
-    {
-      "time": "2026-04-28 10:05:48 PM PT",
-      "result": "error",
-      "note": "NameError: uninitialized constant JSON::ParseError"
-    },
-    {
-      "time": "2026-04-28 10:04:50 PM PT",
-      "result": "error",
-      "note": "NameError: uninitialized constant JSON::ParseError"
-    },
-    {
-      "time": "2026-04-28 10:03:48 PM PT",
-      "result": "error",
-      "note": "NameError: uninitialized constant JSON::ParseError"
-    },
-    {
-      "time": "2026-04-28 10:02:46 PM PT",
-      "result": "error",
-      "note": "NameError: uninitialized constant JSON::ParseError"
+      "time": "2026-04-28 10:07:55 PM PT",
+      "result": "change_unrelated",
+      "note": "Page content changed but no ticket-sale signals detected. Triggered by: New link(s) appeared: https://www.portofoakland.com/, https://www.portofoakland.com/community",
+      "signals": [
+        "New link(s) appeared: https://www.portofoakland.com/, https://www.portofoakland.com/community"
+      ]
     }
   ]
 }
