@@ -1,48 +1,22 @@
 {
   "url": "https://www.portofoakland.com/community/harbor-tours",
   "status": "ok",
-  "last_updated": "2026-04-28 10:43:48 PM PT",
-  "last_check": "2026-04-28 10:43:48 PM PT",
-  "last_change": null,
+  "site_status": "ok",
+  "eb_status": null,
+  "last_updated": "2026-04-28 10:44:37 PM PT",
+  "last_check": "2026-04-28 10:44:37 PM PT",
+  "eb_last_check": null,
   "stats": {
-    "total_checks": 7,
-    "uptime_start": "2026-04-28 10:37:41 PM PT"
+    "total_checks": 1,
+    "eb_checks": 0,
+    "uptime_start": "2026-04-28 10:44:37 PM PT"
   },
   "recent_log": [
     {
-      "time": "2026-04-28 10:43:48 PM PT",
+      "time": "2026-04-28 10:44:37 PM PT",
       "result": "ok",
-      "note": "No change detected."
-    },
-    {
-      "time": "2026-04-28 10:42:53 PM PT",
-      "result": "ok",
-      "note": "No change detected."
-    },
-    {
-      "time": "2026-04-28 10:41:50 PM PT",
-      "result": "ok",
-      "note": "No change detected."
-    },
-    {
-      "time": "2026-04-28 10:40:51 PM PT",
-      "result": "ok",
-      "note": "No change detected."
-    },
-    {
-      "time": "2026-04-28 10:39:49 PM PT",
-      "result": "ok",
-      "note": "No change detected."
-    },
-    {
-      "time": "2026-04-28 10:38:48 PM PT",
-      "result": "ok",
-      "note": "No change detected."
-    },
-    {
-      "time": "2026-04-28 10:37:47 PM PT",
-      "result": "ok",
-      "note": "No change detected."
+      "note": "No change detected.",
+      "source": "site"
     }
   ]
 }
