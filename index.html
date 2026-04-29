@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>sitechecker dashboard</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, -apple-system, sans-serif; background: #f5f5f7; color: #1d1d1f; }
+
+    header { background: #fff; border-bottom: 1px solid #e0e0e0; padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; }
+    header h1 { font-size: 1.1rem; font-weight: 600; letter-spacing: -0.01em; }
+    header .url { font-size: 0.8rem; color: #666; margin-top: 2px; }
+    #refresh-info { font-size: 0.75rem; color: #999; text-align: right; }
+
+    .container { max-width: 960px; margin: 0 auto; padding: 28px 24px; }
+
+    .status-banner {
+      border-radius: 10px; padding: 20px 24px; margin-bottom: 24px;
+      display: flex; align-items: center; gap: 14px;
+    }
+    .status-banner.ok       { background: #d1fae5; color: #065f46; }
+    .status-banner.change   { background: #fef3c7; color: #92400e; }
+    .status-banner.error    { background: #fee2e2; color: #991b1b; }
+    .status-banner.timeout  { background: #ffe4e6; color: #9f1239; }
+    .status-banner.selector_error { background: #fce7f3; color: #9d174d; }
+    .status-banner.loading  { background: #e0e0e0; color: #555; }
+    .status-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+    .ok .status-dot           { background: #10b981; }
+    .change .status-dot       { background: #f59e0b; }
+    .error .status-dot        { background: #ef4444; }
+    .timeout .status-dot      { background: #f43f5e; }
+    .selector_error .status-dot { background: #ec4899; }
+    .loading .status-dot      { background: #aaa; }
+    .status-label { font-size: 1rem; font-weight: 600; }
+    .status-sub   { font-size: 0.82rem; opacity: 0.75; margin-top: 2px; }
+
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; margin-bottom: 24px; }
+    .stat-card { background: #fff; border-radius: 10px; padding: 16px 20px; border: 1px solid #e8e8e8; }
+    .stat-label { font-size: 0.72rem; color: #888; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
+    .stat-value { font-size: 1.1rem; font-weight: 600; }
+    .stat-value.none { color: #aaa; font-weight: 400; }
+
+    .log-card { background: #fff; border-radius: 10px; border: 1px solid #e8e8e8; overflow: hidden; }
+    .log-card h2 { font-size: 0.85rem; font-weight: 600; padding: 14px 20px; border-bottom: 1px solid #e8e8e8; color: #444; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+    th { text-align: left; padding: 10px 20px; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; color: #999; background: #fafafa; border-bottom: 1px solid #e8e8e8; }
+    td { padding: 9px 20px; border-bottom: 1px solid #f0f0f0; }
+    tr:last-child td { border-bottom: none; }
+    tr.row-ok       td:first-child { border-left: 3px solid #10b981; }
+    tr.row-change   td:first-child { border-left: 3px solid #f59e0b; }
+    tr.row-error    td:first-child { border-left: 3px solid #ef4444; }
+    tr.row-timeout  td:first-child { border-left: 3px solid #f43f5e; }
+    tr.row-selector_error td:first-child { border-left: 3px solid #ec4899; }
+    .badge { display: inline-block; border-radius: 4px; padding: 1px 7px; font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+    .badge-ok       { background: #d1fae5; color: #065f46; }
+    .badge-change   { background: #fef3c7; color: #92400e; }
+    .badge-error    { background: #fee2e2; color: #991b1b; }
+    .badge-timeout  { background: #ffe4e6; color: #9f1239; }
+    .badge-selector_error { background: #fce7f3; color: #9d174d; }
+    .note { color: #555; }
+    .empty { padding: 32px 20px; text-align: center; color: #aaa; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>sitechecker</h1>
+      <div class="url" id="header-url">loading…</div>
+    </div>
+    <div id="refresh-info">Refreshing in <span id="countdown">60</span>s</div>
+  </header>
+
+  <div class="container">
+    <div class="status-banner loading" id="status-banner">
+      <div class="status-dot"></div>
+      <div>
+        <div class="status-label">Loading…</div>
+        <div class="status-sub"></div>
+      </div>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card"><div class="stat-label">Last Check</div><div class="stat-value" id="stat-last-check">—</div></div>
+      <div class="stat-card"><div class="stat-label">Total Checks</div><div class="stat-value" id="stat-total">—</div></div>
+      <div class="stat-card"><div class="stat-label">Errors (session)</div><div class="stat-value" id="stat-errors">—</div></div>
+      <div class="stat-card"><div class="stat-label">Last Change Detected</div><div class="stat-value" id="stat-last-change">—</div></div>
+      <div class="stat-card"><div class="stat-label">Monitoring Since</div><div class="stat-value" id="stat-uptime">—</div></div>
+    </div>
+
+    <div class="log-card">
+      <h2>Recent Checks</h2>
+      <table>
+        <thead><tr><th>Time (PT)</th><th>Result</th><th>Note</th></tr></thead>
+        <tbody id="log-body"><tr><td colspan="3" class="empty">Loading…</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    const STATUS_LABELS = {
+      ok:             ['MONITORING',       'All clear — no changes detected.'],
+      change:         ['CHANGE DETECTED',  'The monitored section has changed. Check your notifications.'],
+      error:          ['ERROR',            'An unexpected error occurred on the last check.'],
+      timeout:        ['NETWORK TIMEOUT',  'The last check timed out. The app will retry automatically.'],
+      selector_error: ['SELECTOR ERROR',   'The page structure may have changed — manual inspection required.'],
+    };
+
+    function render(data) {
+      document.getElementById('header-url').textContent = data.url || '';
+
+      const status = data.status || 'ok';
+      const [label, sub] = STATUS_LABELS[status] || ['UNKNOWN', ''];
+      const banner = document.getElementById('status-banner');
+      banner.className = `status-banner ${status}`;
+      banner.innerHTML = `
+        <div class="status-dot"></div>
+        <div>
+          <div class="status-label">${label}</div>
+          <div class="status-sub">${sub}</div>
+        </div>`;
+
+      document.getElementById('stat-last-check').textContent  = data.last_check || '—';
+      document.getElementById('stat-total').textContent       = data.stats?.total_checks ?? '—';
+      document.getElementById('stat-uptime').textContent      = data.stats?.uptime_start || '—';
+
+      const errors = (data.recent_log || []).filter(e => e.result !== 'ok' && e.result !== 'change').length;
+      document.getElementById('stat-errors').textContent = errors;
+
+      const lastChange = data.last_change;
+      const lcEl = document.getElementById('stat-last-change');
+      if (lastChange) {
+        lcEl.textContent = lastChange;
+        lcEl.className = 'stat-value';
+      } else {
+        lcEl.textContent = 'None yet';
+        lcEl.className = 'stat-value none';
+      }
+
+      const tbody = document.getElementById('log-body');
+      const log = data.recent_log || [];
+      if (log.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="3" class="empty">No checks recorded yet.</td></tr>';
+      } else {
+        tbody.innerHTML = log.map(entry => `
+          <tr class="row-${entry.result}">
+            <td>${entry.time || ''}</td>
+            <td><span class="badge badge-${entry.result}">${entry.result}</span></td>
+            <td class="note">${entry.note || ''}</td>
+          </tr>`).join('');
+      }
+    }
+
+    function load() {
+      fetch('status.json?t=' + Date.now())
+        .then(r => r.json())
+        .then(render)
+        .catch(() => {
+          document.getElementById('status-banner').className = 'status-banner loading';
+          document.getElementById('status-banner').innerHTML =
+            '<div class="status-dot"></div><div><div class="status-label">Waiting for first check…</div></div>';
+        });
+    }
+
+    // Countdown + auto-refresh
+    let seconds = 60;
+    setInterval(() => {
+      seconds--;
+      document.getElementById('countdown').textContent = seconds;
+      if (seconds <= 0) { seconds = 60; load(); }
+    }, 1000);
+
+    load();
+  </script>
+</body>
+</html>
