@@ -3,15 +3,21 @@
   "status": "ok",
   "site_status": "ok",
   "eb_status": "ok",
-  "last_updated": "2026-04-28 10:56:15 PM PT",
-  "last_check": "2026-04-28 10:56:14 PM PT",
+  "last_updated": "2026-04-28 10:57:14 PM PT",
+  "last_check": "2026-04-28 10:57:14 PM PT",
   "eb_last_check": "2026-04-28 10:56:15 PM PT",
   "stats": {
-    "total_checks": 5,
+    "total_checks": 6,
     "eb_checks": 5,
     "uptime_start": "2026-04-28 10:52:07 PM PT"
   },
   "recent_log": [
+    {
+      "time": "2026-04-28 10:57:14 PM PT",
+      "result": "ok",
+      "note": "No change detected.",
+      "source": "site"
+    },
     {
       "time": "2026-04-28 10:56:15 PM PT",
       "result": "ok",
