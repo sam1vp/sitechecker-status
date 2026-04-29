@@ -3,59 +3,17 @@
   "status": "ok",
   "site_status": "ok",
   "eb_status": null,
-  "last_updated": "2026-04-28 10:51:40 PM PT",
-  "last_check": "2026-04-28 10:51:40 PM PT",
+  "last_updated": "2026-04-28 10:52:11 PM PT",
+  "last_check": "2026-04-28 10:52:11 PM PT",
   "eb_last_check": null,
   "stats": {
-    "total_checks": 8,
+    "total_checks": 1,
     "eb_checks": 0,
-    "uptime_start": "2026-04-28 10:44:37 PM PT"
+    "uptime_start": "2026-04-28 10:52:07 PM PT"
   },
   "recent_log": [
     {
-      "time": "2026-04-28 10:51:40 PM PT",
-      "result": "ok",
-      "note": "No change detected.",
-      "source": "site"
-    },
-    {
-      "time": "2026-04-28 10:50:40 PM PT",
-      "result": "ok",
-      "note": "No change detected.",
-      "source": "site"
-    },
-    {
-      "time": "2026-04-28 10:49:40 PM PT",
-      "result": "ok",
-      "note": "No change detected.",
-      "source": "site"
-    },
-    {
-      "time": "2026-04-28 10:48:39 PM PT",
-      "result": "ok",
-      "note": "No change detected.",
-      "source": "site"
-    },
-    {
-      "time": "2026-04-28 10:47:40 PM PT",
-      "result": "ok",
-      "note": "No change detected.",
-      "source": "site"
-    },
-    {
-      "time": "2026-04-28 10:46:39 PM PT",
-      "result": "ok",
-      "note": "No change detected.",
-      "source": "site"
-    },
-    {
-      "time": "2026-04-28 10:45:39 PM PT",
-      "result": "ok",
-      "note": "No change detected.",
-      "source": "site"
-    },
-    {
-      "time": "2026-04-28 10:44:37 PM PT",
+      "time": "2026-04-28 10:52:11 PM PT",
       "result": "ok",
       "note": "No change detected.",
       "source": "site"
