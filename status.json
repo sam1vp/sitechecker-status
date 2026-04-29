@@ -3,15 +3,45 @@
   "status": "ok",
   "site_status": "ok",
   "eb_status": "ok",
-  "last_updated": "2026-04-29 02:27:26 PM PT",
-  "last_check": "2026-04-29 02:27:26 PM PT",
-  "eb_last_check": "2026-04-29 02:26:26 PM PT",
+  "last_updated": "2026-04-29 02:32:26 PM PT",
+  "last_check": "2026-04-29 02:31:27 PM PT",
+  "eb_last_check": "2026-04-29 02:32:26 PM PT",
   "stats": {
-    "total_checks": 193,
-    "eb_checks": 193,
+    "total_checks": 195,
+    "eb_checks": 196,
     "uptime_start": "2026-04-29 08:03:24 AM PT"
   },
   "recent_log": [
+    {
+      "time": "2026-04-29 02:32:26 PM PT",
+      "result": "ok",
+      "note": "No change (0 future events).",
+      "source": "eventbrite"
+    },
+    {
+      "time": "2026-04-29 02:31:27 PM PT",
+      "result": "ok",
+      "note": "No change detected.",
+      "source": "site"
+    },
+    {
+      "time": "2026-04-29 02:30:26 PM PT",
+      "result": "ok",
+      "note": "No change (0 future events).",
+      "source": "eventbrite"
+    },
+    {
+      "time": "2026-04-29 02:29:26 PM PT",
+      "result": "ok",
+      "note": "No change detected.",
+      "source": "site"
+    },
+    {
+      "time": "2026-04-29 02:28:26 PM PT",
+      "result": "ok",
+      "note": "No change (0 future events).",
+      "source": "eventbrite"
+    },
     {
       "time": "2026-04-29 02:27:26 PM PT",
       "result": "ok",
@@ -581,36 +611,6 @@
       "result": "timeout",
       "note": "Read timeout.",
       "source": "site"
-    },
-    {
-      "time": "2026-04-29 12:52:26 PM PT",
-      "result": "ok",
-      "note": "No change (0 future events).",
-      "source": "eventbrite"
-    },
-    {
-      "time": "2026-04-29 12:51:26 PM PT",
-      "result": "ok",
-      "note": "No change detected.",
-      "source": "site"
-    },
-    {
-      "time": "2026-04-29 12:50:26 PM PT",
-      "result": "ok",
-      "note": "No change (0 future events).",
-      "source": "eventbrite"
-    },
-    {
-      "time": "2026-04-29 12:49:26 PM PT",
-      "result": "ok",
-      "note": "No change detected.",
-      "source": "site"
-    },
-    {
-      "time": "2026-04-29 12:48:26 PM PT",
-      "result": "ok",
-      "note": "No change (0 future events).",
-      "source": "eventbrite"
     }
   ]
 }
