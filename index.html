@@ -17,20 +17,40 @@
     .header-left .subtitle a { color: #0066cc; text-decoration: none; }
     #refresh-info { font-size: 0.75rem; color: #bbb; text-align: right; line-height: 1.6; }
 
-    .container { max-width: 900px; margin: 0 auto; padding: 28px 24px; }
+    .container { max-width: 960px; margin: 0 auto; padding: 28px 24px; }
 
-    /* ── Main question card ── */
-    .question-card {
-      background: #fff; border-radius: 14px; padding: 28px 32px;
-      margin-bottom: 22px; border: 1px solid #e8e8e8;
-      display: flex; align-items: center; gap: 24px;
+    /* ── Signal cards row ── */
+    .signals-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 22px;
     }
-    .question-card .q { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: #999; margin-bottom: 8px; }
-    .question-card .answer { font-size: 1.6rem; font-weight: 700; line-height: 1.2; }
-    .question-card .sub { font-size: 0.85rem; color: #666; margin-top: 6px; }
-    .indicator { width: 56px; height: 56px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; }
+    @media (max-width: 640px) { .signals-row { grid-template-columns: 1fr; } }
 
-    .status-on_sale       .indicator { background: #d1fae5; }
+    .signal-card {
+      background: #fff; border-radius: 14px; padding: 22px 24px;
+      border: 1px solid #e8e8e8;
+      display: flex; align-items: flex-start; gap: 18px;
+    }
+    .signal-card .source-label {
+      font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.07em; color: #bbb; margin-bottom: 6px;
+    }
+    .signal-card .q {
+      font-size: 0.78rem; font-weight: 600; color: #555; margin-bottom: 8px;
+    }
+    .signal-card .answer { font-size: 1.3rem; font-weight: 700; line-height: 1.25; }
+    .signal-card .sub { font-size: 0.8rem; color: #777; margin-top: 5px; line-height: 1.4; }
+    .signal-card .sub a { color: #0066cc; text-decoration: none; }
+    .indicator {
+      width: 48px; height: 48px; border-radius: 50%; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center; font-size: 1.4rem;
+      margin-top: 2px;
+    }
+
+    /* Status colour sets */
+    .status-on_sale        .indicator { background: #d1fae5; }
     .status-likely_on_sale .indicator { background: #fef3c7; }
     .status-change_unrelated .indicator { background: #dbeafe; }
     .status-ok             .indicator { background: #f0f0f0; }
@@ -38,6 +58,7 @@
     .status-timeout        .indicator { background: #ffe4e6; }
     .status-selector_error .indicator { background: #fce7f3; }
     .status-loading        .indicator { background: #f0f0f0; }
+    .status-disabled       .indicator { background: #f0f0f0; }
 
     .status-on_sale        .answer { color: #065f46; }
     .status-likely_on_sale .answer { color: #92400e; }
@@ -47,44 +68,68 @@
     .status-timeout        .answer { color: #9f1239; }
     .status-selector_error .answer { color: #9d174d; }
     .status-loading        .answer { color: #aaa; }
+    .status-disabled       .answer { color: #bbb; }
 
     /* ── Stats row ── */
     .stats-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 12px; margin-bottom: 22px;
     }
     .stat-card { background: #fff; border-radius: 10px; padding: 14px 18px; border: 1px solid #e8e8e8; }
-    .stat-label { font-size: 0.7rem; color: #999; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 5px; }
+    .stat-label { font-size: 0.68rem; color: #bbb; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 5px; }
     .stat-value { font-size: 1rem; font-weight: 600; }
-    .stat-value.none { color: #aaa; font-weight: 400; font-size: 0.9rem; }
+    .stat-value.none { color: #aaa; font-weight: 400; font-size: 0.88rem; }
     .stat-value.positive { color: #065f46; }
 
     /* ── Log table ── */
     .log-card { background: #fff; border-radius: 10px; border: 1px solid #e8e8e8; overflow: hidden; }
-    .log-header { padding: 13px 20px; border-bottom: 1px solid #e8e8e8; display: flex; align-items: center; justify-content: space-between; }
+    .log-header {
+      padding: 13px 20px; border-bottom: 1px solid #e8e8e8;
+      display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+    }
     .log-header h2 { font-size: 0.82rem; font-weight: 600; color: #555; }
+    .log-tabs { display: flex; gap: 6px; }
+    .tab-btn {
+      font-size: 0.72rem; font-weight: 600; padding: 3px 10px; border-radius: 99px;
+      border: 1px solid #e0e0e0; background: #f5f5f7; color: #888; cursor: pointer;
+      text-transform: uppercase; letter-spacing: 0.04em;
+    }
+    .tab-btn.active { background: #1d1d1f; color: #fff; border-color: #1d1d1f; }
     .log-count { font-size: 0.72rem; color: #bbb; }
     table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
     th { text-align: left; padding: 8px 16px; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.05em; color: #bbb; background: #fafafa; border-bottom: 1px solid #f0f0f0; }
     td { padding: 8px 16px; border-bottom: 1px solid #f7f7f7; vertical-align: top; }
     tr:last-child td { border-bottom: none; }
 
-    tr.row-on_sale td:first-child        { border-left: 3px solid #10b981; }
-    tr.row-likely_on_sale td:first-child  { border-left: 3px solid #f59e0b; }
+    tr.row-on_sale         td:first-child { border-left: 3px solid #10b981; }
+    tr.row-likely_on_sale  td:first-child { border-left: 3px solid #f59e0b; }
     tr.row-change_unrelated td:first-child{ border-left: 3px solid #3b82f6; }
-    tr.row-ok td:first-child              { border-left: 3px solid #d1d5db; }
-    tr.row-error td:first-child           { border-left: 3px solid #ef4444; }
-    tr.row-timeout td:first-child         { border-left: 3px solid #f43f5e; }
-    tr.row-selector_error td:first-child  { border-left: 3px solid #ec4899; }
+    tr.row-ok              td:first-child { border-left: 3px solid #d1d5db; }
+    tr.row-error           td:first-child { border-left: 3px solid #ef4444; }
+    tr.row-timeout         td:first-child { border-left: 3px solid #f43f5e; }
+    tr.row-selector_error  td:first-child { border-left: 3px solid #ec4899; }
 
-    .badge { display: inline-block; border-radius: 4px; padding: 1px 6px; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap; }
-    .badge-on_sale         { background: #d1fae5; color: #065f46; }
-    .badge-likely_on_sale  { background: #fef3c7; color: #92400e; }
-    .badge-change_unrelated{ background: #dbeafe; color: #1e40af; }
-    .badge-ok              { background: #f3f4f6; color: #6b7280; }
-    .badge-error           { background: #fee2e2; color: #991b1b; }
-    .badge-timeout         { background: #ffe4e6; color: #9f1239; }
-    .badge-selector_error  { background: #fce7f3; color: #9d174d; }
+    .badge {
+      display: inline-block; border-radius: 4px; padding: 1px 6px;
+      font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.04em; white-space: nowrap;
+    }
+    .badge-on_sale          { background: #d1fae5; color: #065f46; }
+    .badge-likely_on_sale   { background: #fef3c7; color: #92400e; }
+    .badge-change_unrelated { background: #dbeafe; color: #1e40af; }
+    .badge-ok               { background: #f3f4f6; color: #6b7280; }
+    .badge-error            { background: #fee2e2; color: #991b1b; }
+    .badge-timeout          { background: #ffe4e6; color: #9f1239; }
+    .badge-selector_error   { background: #fce7f3; color: #9d174d; }
+
+    .src-pill {
+      display: inline-block; border-radius: 4px; padding: 1px 5px;
+      font-size: 0.64rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.04em; white-space: nowrap; margin-right: 5px;
+      vertical-align: middle;
+    }
+    .src-site       { background: #e0e7ff; color: #3730a3; }
+    .src-eventbrite { background: #fde8d0; color: #9a3412; }
 
     .note { color: #555; }
     .signals { margin-top: 3px; font-size: 0.72rem; color: #888; font-style: italic; }
@@ -97,7 +142,8 @@
   <div class="header-left">
     <h1>Port of Oakland — Harbor Tours 2026</h1>
     <div class="subtitle">
-      Monitoring <a href="https://www.portofoakland.com/community/harbor-tours" target="_blank">portofoakland.com/community/harbor-tours</a>
+      Watching <a href="https://www.portofoakland.com/community/harbor-tours" target="_blank">portofoakland.com</a>
+      &amp; <a href="https://www.eventbrite.com/o/port-of-oakland-8037753160" target="_blank">Eventbrite</a>
     </div>
   </div>
   <div id="refresh-info">
@@ -108,22 +154,40 @@
 
 <div class="container">
 
-  <!-- Main question -->
-  <div class="question-card status-loading" id="question-card">
-    <div class="indicator" id="indicator">⏳</div>
-    <div>
-      <div class="q">Are 2026 Harbor Tours tickets on sale?</div>
-      <div class="answer" id="answer">Loading…</div>
-      <div class="sub" id="sub"></div>
+  <!-- Two signal cards -->
+  <div class="signals-row">
+
+    <!-- Website signal -->
+    <div class="signal-card status-loading" id="site-card">
+      <div class="indicator" id="site-icon">⏳</div>
+      <div style="flex:1; min-width:0">
+        <div class="source-label">Port of Oakland Website</div>
+        <div class="q">Any ticket or scheduling info on the page?</div>
+        <div class="answer" id="site-answer">Loading…</div>
+        <div class="sub" id="site-sub"></div>
+      </div>
     </div>
+
+    <!-- Eventbrite signal -->
+    <div class="signal-card status-loading" id="eb-card">
+      <div class="indicator" id="eb-icon">⏳</div>
+      <div style="flex:1; min-width:0">
+        <div class="source-label">Eventbrite API</div>
+        <div class="q">Any events listed for Port of Oakland?</div>
+        <div class="answer" id="eb-answer">Loading…</div>
+        <div class="sub" id="eb-sub"></div>
+      </div>
+    </div>
+
   </div>
 
   <!-- Stats -->
   <div class="stats-grid">
-    <div class="stat-card"><div class="stat-label">Last Check</div><div class="stat-value" id="stat-last-check">—</div></div>
-    <div class="stat-card"><div class="stat-label">Checks Run</div><div class="stat-value" id="stat-total">—</div></div>
+    <div class="stat-card"><div class="stat-label">Last Site Check</div><div class="stat-value" id="stat-last-check">—</div></div>
+    <div class="stat-card"><div class="stat-label">Last EB Check</div><div class="stat-value" id="stat-eb-check">—</div></div>
+    <div class="stat-card"><div class="stat-label">Site Checks</div><div class="stat-value" id="stat-total">—</div></div>
+    <div class="stat-card"><div class="stat-label">EB Checks</div><div class="stat-value" id="stat-eb-total">—</div></div>
     <div class="stat-card"><div class="stat-label">Notable Events</div><div class="stat-value" id="stat-events">—</div></div>
-    <div class="stat-card"><div class="stat-label">Last Change</div><div class="stat-value" id="stat-last-change">—</div></div>
     <div class="stat-card"><div class="stat-label">Monitoring Since</div><div class="stat-value" id="stat-uptime">—</div></div>
   </div>
 
@@ -131,88 +195,139 @@
   <div class="log-card">
     <div class="log-header">
       <h2>Check Log</h2>
+      <div class="log-tabs">
+        <button class="tab-btn active" id="tab-all"  onclick="setTab('all')">All</button>
+        <button class="tab-btn"        id="tab-site" onclick="setTab('site')">Site</button>
+        <button class="tab-btn"        id="tab-eb"   onclick="setTab('eb')">Eventbrite</button>
+      </div>
       <span class="log-count" id="log-count"></span>
     </div>
     <table>
-      <thead><tr><th>Time (PT)</th><th>Status</th><th>Detail</th></tr></thead>
-      <tbody id="log-body"><tr><td colspan="3" class="empty">Loading…</td></tr></tbody>
+      <thead><tr><th>Time (PT)</th><th>Source</th><th>Status</th><th>Detail</th></tr></thead>
+      <tbody id="log-body"><tr><td colspan="4" class="empty">Loading…</td></tr></tbody>
     </table>
   </div>
 
 </div>
 
 <script>
-  const ANSWERS = {
-    on_sale:          ['🎉 Yes — tickets are on sale!',   'An Eventbrite link has appeared. Go buy tickets now.'],
-    likely_on_sale:   ['⚠️ Probably — check now',         'Strong signals detected. Scheduling or registration info may be available.'],
-    change_unrelated: ['🔵 Unclear — page changed',       'Something changed on the page, but no ticket-sale signals were detected.'],
-    ok:               ['Not yet',                          'No changes detected. The checker is running and watching.'],
-    error:            ['Unknown — check error',            'An error occurred on the last check. See log for details.'],
-    timeout:          ['Unknown — network timeout',        'The last check timed out. Retrying automatically.'],
-    selector_error:   ['Unknown — page structure changed', 'The page layout may have changed. Manual inspection needed.'],
-    loading:          ['Loading…',                         ''],
+  // ── Copy ──────────────────────────────────────────────────────────────────
+
+  const SITE_ANSWERS = {
+    on_sale:          ['🎉 Yes — Eventbrite link appeared!', 'Tickets are very likely on sale. Check the Port of Oakland page now.'],
+    likely_on_sale:   ['⚠️ Probably — strong signals',       'Scheduling or registration language appeared. Check now.'],
+    change_unrelated: ['🔵 Not yet — page changed',          'Something changed on the page but no ticket-sale signals detected.'],
+    ok:               ['Not yet',                            'Watching the page. No relevant changes detected.'],
+    error:            ['Unknown — check error',              'An error occurred on the last check.'],
+    timeout:          ['Unknown — timeout',                  'The last check timed out. Retrying automatically.'],
+    selector_error:   ['Unknown — layout changed',           'Page structure may have changed. Manual check recommended.'],
+    loading:          ['Loading…', ''],
+  };
+
+  const EB_ANSWERS = {
+    on_sale:          ['🎉 Yes — events are live!',     'Port of Oakland has future events on Eventbrite. See log for links.'],
+    likely_on_sale:   ['⚠️ Possibly',                    'Eventbrite count changed — check organizer page.'],
+    change_unrelated: ['🔵 Count changed',               'Future event count changed but not from zero.'],
+    ok:               ['Not yet',                        'Watching Eventbrite. No future events listed yet.'],
+    error:            ['Unknown — API error',            'An error occurred fetching the Eventbrite organizer profile.'],
+    loading:          ['Loading…', ''],
+    disabled:         ['Not configured', 'Eventbrite monitoring is not enabled on this instance.'],
   };
 
   const ICONS = {
     on_sale: '🎉', likely_on_sale: '⚠️', change_unrelated: '🔵',
-    ok: '✓', error: '✗', timeout: '⏱', selector_error: '⚙', loading: '⏳',
+    ok: '✓', error: '✗', timeout: '⏱', selector_error: '⚙', loading: '⏳', disabled: '—',
   };
 
-  function render(data) {
-    const status = data.status || 'ok';
-    const [answer, sub] = ANSWERS[status] || ANSWERS.ok;
+  // ── State ─────────────────────────────────────────────────────────────────
 
-    const card = document.getElementById('question-card');
-    card.className = `question-card status-${status}`;
-    document.getElementById('indicator').textContent = ICONS[status] || '?';
-    document.getElementById('answer').textContent = answer;
-    document.getElementById('sub').textContent = sub;
+  let allLog = [];
+  let activeTab = 'all';
 
-    document.getElementById('last-updated').textContent = 'Updated ' + (data.last_updated || '—');
-    document.getElementById('stat-last-check').textContent = data.last_check || '—';
-    document.getElementById('stat-total').textContent = (data.stats?.total_checks ?? '—').toLocaleString();
-    document.getElementById('stat-uptime').textContent = data.stats?.uptime_start || '—';
+  function setTab(tab) {
+    activeTab = tab;
+    ['all','site','eb'].forEach(t => {
+      document.getElementById('tab-' + t).classList.toggle('active', t === tab);
+    });
+    renderLog();
+  }
 
-    const log = data.recent_log || [];
-    const events = log.filter(e => e.result !== 'ok' && !['error','timeout','selector_error'].includes(e.result));
-    document.getElementById('stat-events').textContent = events.length || '0';
+  // ── Render ────────────────────────────────────────────────────────────────
 
-    const lastChange = data.last_change;
-    const lcEl = document.getElementById('stat-last-change');
-    if (lastChange) {
-      lcEl.textContent = lastChange;
-      lcEl.className = 'stat-value positive';
-    } else {
-      lcEl.textContent = 'None yet';
-      lcEl.className = 'stat-value none';
-    }
+  function setCard(id, iconId, answerId, subId, status, answers) {
+    const card = document.getElementById(id);
+    card.className = `signal-card status-${status}`;
+    document.getElementById(iconId).textContent = ICONS[status] || '?';
+    const [answer, sub] = answers[status] || answers.ok || ['—', ''];
+    document.getElementById(answerId).textContent = answer;
+    document.getElementById(subId).textContent   = sub;
+  }
+
+  function renderLog() {
+    const log = activeTab === 'site' ? allLog.filter(e => e.source !== 'eventbrite')
+              : activeTab === 'eb'   ? allLog.filter(e => e.source === 'eventbrite')
+              : allLog;
 
     document.getElementById('log-count').textContent = log.length ? `${log.length} entries` : '';
 
     const tbody = document.getElementById('log-body');
     if (!log.length) {
-      tbody.innerHTML = '<tr><td colspan="3" class="empty">No checks recorded yet.</td></tr>';
-    } else {
-      tbody.innerHTML = log.map(e => {
-        const signalHtml = e.signals?.length
-          ? `<div class="signals">Signals: ${e.signals.join(' · ')}</div>` : '';
-        return `
-          <tr class="row-${e.result}">
-            <td style="white-space:nowrap">${e.time || ''}</td>
-            <td><span class="badge badge-${e.result}">${e.result.replace(/_/g,' ')}</span></td>
-            <td class="note">${e.note || ''}${signalHtml}</td>
-          </tr>`;
-      }).join('');
+      tbody.innerHTML = `<tr><td colspan="4" class="empty">No entries yet.</td></tr>`;
+      return;
     }
+    tbody.innerHTML = log.map(e => {
+      const srcClass = e.source === 'eventbrite' ? 'src-eventbrite' : 'src-site';
+      const srcLabel = e.source === 'eventbrite' ? 'Eventbrite' : 'Site';
+      const sigHtml  = e.signals?.length
+        ? `<div class="signals">Signals: ${e.signals.join(' · ')}</div>` : '';
+      return `
+        <tr class="row-${e.result}">
+          <td style="white-space:nowrap">${e.time || ''}</td>
+          <td><span class="src-pill ${srcClass}">${srcLabel}</span></td>
+          <td><span class="badge badge-${e.result}">${(e.result||'').replace(/_/g,' ')}</span></td>
+          <td class="note">${e.note || ''}${sigHtml}</td>
+        </tr>`;
+    }).join('');
   }
+
+  function render(data) {
+    // Site card
+    const siteStatus = data.site_status || data.status || 'ok';
+    setCard('site-card','site-icon','site-answer','site-sub', siteStatus, SITE_ANSWERS);
+
+    // Eventbrite card
+    const ebStatus = data.eb_status == null ? 'disabled' : (data.eb_status || 'ok');
+    setCard('eb-card','eb-icon','eb-answer','eb-sub', ebStatus, EB_ANSWERS);
+
+    // Header timestamp
+    document.getElementById('last-updated').textContent = 'Updated ' + (data.last_updated || '—');
+
+    // Stats
+    document.getElementById('stat-last-check').textContent  = data.last_check     || '—';
+    document.getElementById('stat-eb-check').textContent    = data.eb_last_check  || '—';
+    document.getElementById('stat-total').textContent       = (data.stats?.total_checks ?? '—').toLocaleString();
+    document.getElementById('stat-eb-total').textContent    = (data.stats?.eb_checks    ?? '—').toLocaleString();
+    document.getElementById('stat-uptime').textContent      = data.stats?.uptime_start  || '—';
+
+    const notable = (data.recent_log || []).filter(e =>
+      !['ok','error','timeout','selector_error'].includes(e.result)
+    );
+    document.getElementById('stat-events').textContent = notable.length || '0';
+
+    // Log
+    allLog = data.recent_log || [];
+    renderLog();
+  }
+
+  // ── Fetch & refresh ───────────────────────────────────────────────────────
 
   function load() {
     fetch('status.json?t=' + Date.now())
       .then(r => r.json())
       .then(render)
       .catch(() => {
-        document.getElementById('question-card').className = 'question-card status-loading';
-        document.getElementById('answer').textContent = 'Waiting for first check…';
+        document.getElementById('site-answer').textContent = 'Waiting for first check…';
+        document.getElementById('eb-answer').textContent   = '—';
       });
   }
 
