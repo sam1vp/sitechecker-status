@@ -3,15 +3,21 @@
   "status": "ok",
   "site_status": "ok",
   "eb_status": "ok",
-  "last_updated": "2026-04-29 12:35:14 AM PT",
+  "last_updated": "2026-04-29 12:36:13 AM PT",
   "last_check": "2026-04-29 12:35:14 AM PT",
-  "eb_last_check": "2026-04-29 12:34:13 AM PT",
+  "eb_last_check": "2026-04-29 12:36:13 AM PT",
   "stats": {
     "total_checks": 46,
-    "eb_checks": 46,
+    "eb_checks": 47,
     "uptime_start": "2026-04-28 11:05:07 PM PT"
   },
   "recent_log": [
+    {
+      "time": "2026-04-29 12:36:13 AM PT",
+      "result": "ok",
+      "note": "No change (0 future events).",
+      "source": "eventbrite"
+    },
     {
       "time": "2026-04-29 12:35:14 AM PT",
       "result": "ok",
