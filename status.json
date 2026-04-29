@@ -3,167 +3,23 @@
   "status": "ok",
   "site_status": "ok",
   "eb_status": "ok",
-  "last_updated": "2026-04-28 11:04:15 PM PT",
-  "last_check": "2026-04-28 11:04:14 PM PT",
-  "eb_last_check": "2026-04-28 11:04:15 PM PT",
+  "last_updated": "2026-04-28 11:05:11 PM PT",
+  "last_check": "2026-04-28 11:05:10 PM PT",
+  "eb_last_check": "2026-04-28 11:05:11 PM PT",
   "stats": {
-    "total_checks": 13,
-    "eb_checks": 13,
-    "uptime_start": "2026-04-28 10:52:07 PM PT"
+    "total_checks": 1,
+    "eb_checks": 1,
+    "uptime_start": "2026-04-28 11:05:07 PM PT"
   },
   "recent_log": [
     {
-      "time": "2026-04-28 11:04:15 PM PT",
+      "time": "2026-04-28 11:05:11 PM PT",
       "result": "ok",
       "note": "No change (0 future events).",
       "source": "eventbrite"
     },
     {
-      "time": "2026-04-28 11:04:14 PM PT",
-      "result": "ok",
-      "note": "No change detected.",
-      "source": "site"
-    },
-    {
-      "time": "2026-04-28 11:03:16 PM PT",
-      "result": "ok",
-      "note": "No change (0 future events).",
-      "source": "eventbrite"
-    },
-    {
-      "time": "2026-04-28 11:03:14 PM PT",
-      "result": "ok",
-      "note": "No change detected.",
-      "source": "site"
-    },
-    {
-      "time": "2026-04-28 11:02:49 PM PT",
-      "result": "ok",
-      "note": "No change (0 future events).",
-      "source": "eventbrite"
-    },
-    {
-      "time": "2026-04-28 11:02:48 PM PT",
-      "result": "timeout",
-      "note": "Read timeout.",
-      "source": "site"
-    },
-    {
-      "time": "2026-04-28 11:01:15 PM PT",
-      "result": "ok",
-      "note": "No change (0 future events).",
-      "source": "eventbrite"
-    },
-    {
-      "time": "2026-04-28 11:01:14 PM PT",
-      "result": "ok",
-      "note": "No change detected.",
-      "source": "site"
-    },
-    {
-      "time": "2026-04-28 11:00:16 PM PT",
-      "result": "ok",
-      "note": "No change (0 future events).",
-      "source": "eventbrite"
-    },
-    {
-      "time": "2026-04-28 11:00:15 PM PT",
-      "result": "ok",
-      "note": "No change detected.",
-      "source": "site"
-    },
-    {
-      "time": "2026-04-28 10:59:15 PM PT",
-      "result": "ok",
-      "note": "No change (0 future events).",
-      "source": "eventbrite"
-    },
-    {
-      "time": "2026-04-28 10:59:14 PM PT",
-      "result": "ok",
-      "note": "No change detected.",
-      "source": "site"
-    },
-    {
-      "time": "2026-04-28 10:58:15 PM PT",
-      "result": "ok",
-      "note": "No change (0 future events).",
-      "source": "eventbrite"
-    },
-    {
-      "time": "2026-04-28 10:58:14 PM PT",
-      "result": "ok",
-      "note": "No change detected.",
-      "source": "site"
-    },
-    {
-      "time": "2026-04-28 10:57:15 PM PT",
-      "result": "ok",
-      "note": "No change (0 future events).",
-      "source": "eventbrite"
-    },
-    {
-      "time": "2026-04-28 10:57:14 PM PT",
-      "result": "ok",
-      "note": "No change detected.",
-      "source": "site"
-    },
-    {
-      "time": "2026-04-28 10:56:15 PM PT",
-      "result": "ok",
-      "note": "No change (0 future events).",
-      "source": "eventbrite"
-    },
-    {
-      "time": "2026-04-28 10:56:14 PM PT",
-      "result": "ok",
-      "note": "No change detected.",
-      "source": "site"
-    },
-    {
-      "time": "2026-04-28 10:55:16 PM PT",
-      "result": "ok",
-      "note": "No change (0 future events).",
-      "source": "eventbrite"
-    },
-    {
-      "time": "2026-04-28 10:55:15 PM PT",
-      "result": "ok",
-      "note": "No change detected.",
-      "source": "site"
-    },
-    {
-      "time": "2026-04-28 10:54:18 PM PT",
-      "result": "ok",
-      "note": "No change (0 future events).",
-      "source": "eventbrite"
-    },
-    {
-      "time": "2026-04-28 10:54:17 PM PT",
-      "result": "ok",
-      "note": "No change detected.",
-      "source": "site"
-    },
-    {
-      "time": "2026-04-28 10:53:18 PM PT",
-      "result": "ok",
-      "note": "No change (0 future events).",
-      "source": "eventbrite"
-    },
-    {
-      "time": "2026-04-28 10:53:16 PM PT",
-      "result": "ok",
-      "note": "No change detected.",
-      "source": "site"
-    },
-    {
-      "time": "2026-04-28 10:52:12 PM PT",
-      "result": "ok",
-      "note": "No change (0 future events).",
-      "source": "eventbrite"
-    },
-    {
-      "time": "2026-04-28 10:52:11 PM PT",
+      "time": "2026-04-28 11:05:10 PM PT",
       "result": "ok",
       "note": "No change detected.",
       "source": "site"
