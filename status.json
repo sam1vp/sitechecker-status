@@ -3,15 +3,45 @@
   "status": "ok",
   "site_status": "ok",
   "eb_status": "ok",
-  "last_updated": "2026-04-30 04:22:26 AM PT",
-  "last_check": "2026-04-30 04:21:30 AM PT",
-  "eb_last_check": "2026-04-30 04:22:26 AM PT",
+  "last_updated": "2026-04-30 04:27:26 AM PT",
+  "last_check": "2026-04-30 04:27:26 AM PT",
+  "eb_last_check": "2026-04-30 04:26:26 AM PT",
   "stats": {
-    "total_checks": 610,
-    "eb_checks": 611,
+    "total_checks": 613,
+    "eb_checks": 613,
     "uptime_start": "2026-04-29 08:03:24 AM PT"
   },
   "recent_log": [
+    {
+      "time": "2026-04-30 04:27:26 AM PT",
+      "result": "ok",
+      "note": "No change detected.",
+      "source": "site"
+    },
+    {
+      "time": "2026-04-30 04:26:26 AM PT",
+      "result": "ok",
+      "note": "No change (0 future events).",
+      "source": "eventbrite"
+    },
+    {
+      "time": "2026-04-30 04:25:28 AM PT",
+      "result": "ok",
+      "note": "No change detected.",
+      "source": "site"
+    },
+    {
+      "time": "2026-04-30 04:24:26 AM PT",
+      "result": "ok",
+      "note": "No change (0 future events).",
+      "source": "eventbrite"
+    },
+    {
+      "time": "2026-04-30 04:23:58 AM PT",
+      "result": "timeout",
+      "note": "Read timeout.",
+      "source": "site"
+    },
     {
       "time": "2026-04-30 04:22:26 AM PT",
       "result": "ok",
@@ -581,36 +611,6 @@
       "result": "ok",
       "note": "No change (0 future events).",
       "source": "eventbrite"
-    },
-    {
-      "time": "2026-04-30 02:47:26 AM PT",
-      "result": "ok",
-      "note": "No change detected.",
-      "source": "site"
-    },
-    {
-      "time": "2026-04-30 02:46:26 AM PT",
-      "result": "ok",
-      "note": "No change (0 future events).",
-      "source": "eventbrite"
-    },
-    {
-      "time": "2026-04-30 02:45:26 AM PT",
-      "result": "ok",
-      "note": "No change detected.",
-      "source": "site"
-    },
-    {
-      "time": "2026-04-30 02:44:26 AM PT",
-      "result": "ok",
-      "note": "No change (0 future events).",
-      "source": "eventbrite"
-    },
-    {
-      "time": "2026-04-30 02:43:26 AM PT",
-      "result": "ok",
-      "note": "No change detected.",
-      "source": "site"
     }
   ]
 }
