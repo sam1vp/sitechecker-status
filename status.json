@@ -1,17 +1,47 @@
 {
   "url": "https://www.portofoakland.com/community/harbor-tours",
-  "status": "ok",
-  "site_status": "ok",
+  "status": "selector_error",
+  "site_status": "selector_error",
   "eb_status": "ok",
-  "last_updated": "2026-05-04 01:42:26 PM PT",
-  "last_check": "2026-05-04 01:41:26 PM PT",
-  "eb_last_check": "2026-05-04 01:42:26 PM PT",
+  "last_updated": "2026-05-04 01:47:26 PM PT",
+  "last_check": "2026-05-04 01:47:26 PM PT",
+  "eb_last_check": "2026-05-04 01:46:26 PM PT",
   "stats": {
-    "total_checks": 3770,
-    "eb_checks": 3771,
+    "total_checks": 3773,
+    "eb_checks": 3773,
     "uptime_start": "2026-04-29 08:03:24 AM PT"
   },
   "recent_log": [
+    {
+      "time": "2026-05-04 01:47:26 PM PT",
+      "result": "selector_error",
+      "note": "Could not find 'div[data-id=\"9c3deeb\"]' on page — selector may need updating",
+      "source": "site"
+    },
+    {
+      "time": "2026-05-04 01:46:26 PM PT",
+      "result": "ok",
+      "note": "No change (0 future events).",
+      "source": "eventbrite"
+    },
+    {
+      "time": "2026-05-04 01:45:26 PM PT",
+      "result": "selector_error",
+      "note": "Could not find 'div[data-id=\"9c3deeb\"]' on page — selector may need updating",
+      "source": "site"
+    },
+    {
+      "time": "2026-05-04 01:44:26 PM PT",
+      "result": "ok",
+      "note": "No change (0 future events).",
+      "source": "eventbrite"
+    },
+    {
+      "time": "2026-05-04 01:43:26 PM PT",
+      "result": "ok",
+      "note": "No change detected.",
+      "source": "site"
+    },
     {
       "time": "2026-05-04 01:42:26 PM PT",
       "result": "ok",
@@ -581,36 +611,6 @@
       "result": "ok",
       "note": "No change (0 future events).",
       "source": "eventbrite"
-    },
-    {
-      "time": "2026-05-04 12:07:26 PM PT",
-      "result": "ok",
-      "note": "No change detected.",
-      "source": "site"
-    },
-    {
-      "time": "2026-05-04 12:06:26 PM PT",
-      "result": "ok",
-      "note": "No change (0 future events).",
-      "source": "eventbrite"
-    },
-    {
-      "time": "2026-05-04 12:05:26 PM PT",
-      "result": "ok",
-      "note": "No change detected.",
-      "source": "site"
-    },
-    {
-      "time": "2026-05-04 12:04:26 PM PT",
-      "result": "ok",
-      "note": "No change (0 future events).",
-      "source": "eventbrite"
-    },
-    {
-      "time": "2026-05-04 12:03:27 PM PT",
-      "result": "ok",
-      "note": "No change detected.",
-      "source": "site"
     }
   ]
 }
