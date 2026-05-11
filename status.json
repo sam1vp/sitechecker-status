@@ -3,15 +3,45 @@
   "status": "selector_error",
   "site_status": "selector_error",
   "eb_status": "ok",
-  "last_updated": "2026-05-11 10:25:48 AM PT",
-  "last_check": "2026-05-11 10:25:48 AM PT",
-  "eb_last_check": "2026-05-11 10:24:48 AM PT",
+  "last_updated": "2026-05-11 10:30:48 AM PT",
+  "last_check": "2026-05-11 10:29:48 AM PT",
+  "eb_last_check": "2026-05-11 10:30:48 AM PT",
   "stats": {
-    "total_checks": 43,
-    "eb_checks": 43,
+    "total_checks": 45,
+    "eb_checks": 46,
     "uptime_start": "2026-05-11 09:01:46 AM PT"
   },
   "recent_log": [
+    {
+      "time": "2026-05-11 10:30:48 AM PT",
+      "result": "ok",
+      "note": "No change (0 future events).",
+      "source": "eventbrite"
+    },
+    {
+      "time": "2026-05-11 10:29:48 AM PT",
+      "result": "selector_error",
+      "note": "Could not find 'div[data-id=\"9c3deeb\"]' on page — selector may need updating",
+      "source": "site"
+    },
+    {
+      "time": "2026-05-11 10:28:48 AM PT",
+      "result": "ok",
+      "note": "No change (0 future events).",
+      "source": "eventbrite"
+    },
+    {
+      "time": "2026-05-11 10:27:48 AM PT",
+      "result": "selector_error",
+      "note": "Could not find 'div[data-id=\"9c3deeb\"]' on page — selector may need updating",
+      "source": "site"
+    },
+    {
+      "time": "2026-05-11 10:26:48 AM PT",
+      "result": "ok",
+      "note": "No change (0 future events).",
+      "source": "eventbrite"
+    },
     {
       "time": "2026-05-11 10:25:48 AM PT",
       "result": "selector_error",
