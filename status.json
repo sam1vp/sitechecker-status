@@ -3,15 +3,45 @@
   "status": "selector_error",
   "site_status": "selector_error",
   "eb_status": "ok",
-  "last_updated": "2026-05-11 01:20:48 PM PT",
-  "last_check": "2026-05-11 01:19:48 PM PT",
-  "eb_last_check": "2026-05-11 01:20:48 PM PT",
+  "last_updated": "2026-05-11 01:25:48 PM PT",
+  "last_check": "2026-05-11 01:25:48 PM PT",
+  "eb_last_check": "2026-05-11 01:24:48 PM PT",
   "stats": {
-    "total_checks": 130,
-    "eb_checks": 131,
+    "total_checks": 133,
+    "eb_checks": 133,
     "uptime_start": "2026-05-11 09:01:46 AM PT"
   },
   "recent_log": [
+    {
+      "time": "2026-05-11 01:25:48 PM PT",
+      "result": "selector_error",
+      "note": "Could not find 'div[data-id=\"9c3deeb\"]' on page — selector may need updating",
+      "source": "site"
+    },
+    {
+      "time": "2026-05-11 01:24:48 PM PT",
+      "result": "ok",
+      "note": "No change (0 future events).",
+      "source": "eventbrite"
+    },
+    {
+      "time": "2026-05-11 01:23:48 PM PT",
+      "result": "selector_error",
+      "note": "Could not find 'div[data-id=\"9c3deeb\"]' on page — selector may need updating",
+      "source": "site"
+    },
+    {
+      "time": "2026-05-11 01:22:48 PM PT",
+      "result": "ok",
+      "note": "No change (0 future events).",
+      "source": "eventbrite"
+    },
+    {
+      "time": "2026-05-11 01:21:48 PM PT",
+      "result": "selector_error",
+      "note": "Could not find 'div[data-id=\"9c3deeb\"]' on page — selector may need updating",
+      "source": "site"
+    },
     {
       "time": "2026-05-11 01:20:48 PM PT",
       "result": "ok",
@@ -581,36 +611,6 @@
       "result": "ok",
       "note": "No change (0 future events).",
       "source": "eventbrite"
-    },
-    {
-      "time": "2026-05-11 11:45:48 AM PT",
-      "result": "selector_error",
-      "note": "Could not find 'div[data-id=\"9c3deeb\"]' on page — selector may need updating",
-      "source": "site"
-    },
-    {
-      "time": "2026-05-11 11:44:48 AM PT",
-      "result": "ok",
-      "note": "No change (0 future events).",
-      "source": "eventbrite"
-    },
-    {
-      "time": "2026-05-11 11:43:48 AM PT",
-      "result": "selector_error",
-      "note": "Could not find 'div[data-id=\"9c3deeb\"]' on page — selector may need updating",
-      "source": "site"
-    },
-    {
-      "time": "2026-05-11 11:42:48 AM PT",
-      "result": "ok",
-      "note": "No change (0 future events).",
-      "source": "eventbrite"
-    },
-    {
-      "time": "2026-05-11 11:41:48 AM PT",
-      "result": "selector_error",
-      "note": "Could not find 'div[data-id=\"9c3deeb\"]' on page — selector may need updating",
-      "source": "site"
     }
   ]
 }
